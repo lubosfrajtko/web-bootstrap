@@ -1,0 +1,88 @@
+/* HEADER */
+.header{
+    padding: 1.25em 0;
+}
+.logo{
+
+}
+.nav{
+    margin: 0.625em 0 ;
+}
+.menu{
+    display: flex;
+    margin-top: 0.1875em;
+
+}
+.menu li{
+    margin-right: 3.125em;
+    list-style: none;
+}
+.menu li:last-child{
+    margin-right: 0;
+}
+.menu a{
+    font-size: 1em;
+    color: $color-links;
+    font-weight: 500;
+}
+.menu a:hover{
+    text-decoration: none;
+}
+.menu a:nth-child(3){
+    color: $color-text;
+    border-bottom: 0.125em solid $color-text;
+}
+
+.drop{
+    display: none;
+    padding: 0.8em 0 1em 0;
+    font-size: 1.56em;
+    margin-top: -1.2em;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 2em;//25
+}
+
+.content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    background: darken(white,0.1875em);
+    margin-top: 5em;
+}
+
+.content a{
+    color: $color-text;
+    display: block;
+    margin: 0 1.42em; 
+    padding: 0.71em;
+    border-bottom: 1px solid darken(white, 5%); 
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.87em;
+}
+.content a:hover{
+    background: darken(white, 10%);
+    color: lighten($color-links, 20%);
+    transition: .5s all ease-in-out;
+}
+.content a:last-child{
+    padding-bottom: 10px;
+}
+
+/*MEDIA QUERIES*/
+
+@media(max-width: $width-lg){
+
+    .menu{
+        display: none;
+    }
+    .drop{
+        display: block;
+    }
+
+}
